@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+void main (){
+  runApp(MaterialApp(
+    home: app2(),
+  ));
+}
+
+class app2 extends StatefulWidget {
+  const app2({Key? key}) : super(key: key);
+
+  @override
+  _app2State createState() => _app2State();
+}
+
+class _app2State extends State<app2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ANIMAIS"),
+        backgroundColor: Colors.red,
+      ),
+      body: Container(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(30),
+          child: Column(
+            children:<Widget> [
+              Padding(
+                padding: EdgeInsets.only(bottom: 30),
+
+                child: Image.asset("imagens/cat.jpg"),
+              ),
+        Padding(
+          padding: EdgeInsets.only(bottom: 1),
+          //ignore: deprecated_member_use
+          child: RaisedButton(
+            padding: EdgeInsets.all(1),
+            child: Text(
+              "<- BACK",
+              style: TextStyle(fontSize: 10),
+            ),
+            onPressed: () {},
+          ))],
+          ),
+
+        ),
+      ),
+      
+    );
+  }
+}
+
